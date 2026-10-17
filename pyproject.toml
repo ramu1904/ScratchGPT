@@ -19,6 +19,10 @@ dev = [
 training = [
     "torch>=2.4",
 ]
+data = [
+    "datasets==3.6.0",
+    "pyarrow==18.1.0"
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -29,7 +33,7 @@ pythonpath = ["src"]
 addopts = "-ra"
 
 [tool.black]
-line-length = 79
+line-length = 88
 target-version = ["py310"]
 include = '\.pyi?$'
 extend-exclude = '''

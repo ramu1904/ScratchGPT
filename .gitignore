@@ -1,8 +1,8 @@
-
-# Python bytecode and caches
+﻿# Python caches and compiled files
 __pycache__/
 *.py[cod]
 *$py.class
+*.egg-info/
 
 # Virtual environments
 .venv/
@@ -10,42 +10,48 @@ venv/
 env/
 ENV/
 
-# Packaging and build artifacts
+# Build and packaging artifacts
 build/
 dist/
-*.egg-info/
 .eggs/
-wheels/
+wheels/*
+!wheels/.gitkeep
+wheelhouse/*
+!wheelhouse/.gitkeep
 
-# Testing and coverage
+# Test and tooling caches
 .pytest_cache/
 .coverage
 .coverage.*
 htmlcov/
 .tox/
 .nox/
-
-# Code formatters and type checkers
-.black
 .mypy_cache/
+.pyre/
 .ruff_cache/
 
-# Secrets and environment variables
+# Secrets and environment files
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+secrets/
+credentials/
 
-# Jupyter
+# Jupyter temporary files
 .ipynb_checkpoints/
 
-# Datasets and generated data
+# Local datasets and generated encoded data
 data/raw/*
-data/processed/*
 !data/raw/.gitkeep
+data/processed/*
 !data/processed/.gitkeep
+datasets/
+dataset/
 
-# Model weights, checkpoints and training outputs
-checkpoints/*
+# Model weights and temporary checkpoints
+checkpoints/
 outputs/
 runs/
 wandb/
@@ -56,16 +62,21 @@ mlruns/
 *.safetensors
 *.onnx
 
-# Generated tokenizer artifacts
+# Temporary experiment copies and local evaluation outputs
+ScratchGPT-training/
+
+# Generated tokenizer artifacts (keep project source and configs)
 tokenizer.json
 encoder.json
 vocab.bpe
 
-# Logs
+# Logs and temporary files
 *.log
 logs/
+*.tmp
+*.temp
 
-# IDE and operating system files
+# Editor and operating-system files
 .vscode/
 .idea/
 .DS_Store
