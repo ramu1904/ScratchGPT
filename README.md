@@ -212,11 +212,13 @@ The original-data and cleaned-data runs used different text normalization and to
 
 **Training and validation loss**
 
-*Graph screenshot coming soon.*
+<img width="1440" height="800" alt="loss_curves_10epoch" src="https://github.com/user-attachments/assets/a75d1d05-63c1-41c3-aad0-6144a642d0c9" />
+
 
 **Validation loss**
 
-*Graph screenshot coming soon.*
+<img width="1440" height="800" alt="validation_loss_10epoch" src="https://github.com/user-attachments/assets/5d1dc228-18c5-475c-ac24-af30a97c2011" />
+
 
 ---
 
